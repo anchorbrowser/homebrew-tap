@@ -5,13 +5,13 @@
 class Anchorbrowser < Formula
   desc "AnchorBrowser CLI for sessions, tasks, and identities"
   homepage "https://anchorbrowser.io"
-  version "0.1.11"
+  version "0.1.12"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/anchorbrowser/cli/releases/download/v0.1.11/anchorbrowser_0.1.11_darwin_amd64.tar.gz"
-      sha256 "335b06060ffd5e14b77704ae10afc152bba84b8bd1ea53c0af221963ca05cbfc"
+      url "https://github.com/anchorbrowser/cli/releases/download/v0.1.12/anchorbrowser_0.1.12_darwin_amd64.tar.gz"
+      sha256 "ea53a24833f54e2ac67a298a89ed151534a685395334f94f7851a1aa4c41d893"
 
       define_method(:install) do
         bin.install "anchorbrowser"
@@ -19,8 +19,8 @@ class Anchorbrowser < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/anchorbrowser/cli/releases/download/v0.1.11/anchorbrowser_0.1.11_darwin_arm64.tar.gz"
-      sha256 "af212801a00f05c4f021ccb4312f5b89454436ba9956a5273843d47f62406f08"
+      url "https://github.com/anchorbrowser/cli/releases/download/v0.1.12/anchorbrowser_0.1.12_darwin_arm64.tar.gz"
+      sha256 "86db8080ef89a4642b80550b322bf989c9256600be60ce2245abfef8d6a43d28"
 
       define_method(:install) do
         bin.install "anchorbrowser"
@@ -31,16 +31,16 @@ class Anchorbrowser < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/anchorbrowser/cli/releases/download/v0.1.11/anchorbrowser_0.1.11_linux_amd64.tar.gz"
-      sha256 "6e84a06061d8fe97a43d98712ed26ef2c055393163a30a24062229ffddf8fe00"
+      url "https://github.com/anchorbrowser/cli/releases/download/v0.1.12/anchorbrowser_0.1.12_linux_amd64.tar.gz"
+      sha256 "89de1bc89fec832cab87821bd1ddace03658ef05d0a712457c97cf6db32b0e04"
       define_method(:install) do
         bin.install "anchorbrowser"
         generate_completions_from_executable(bin/"anchorbrowser", "__completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/anchorbrowser/cli/releases/download/v0.1.11/anchorbrowser_0.1.11_linux_arm64.tar.gz"
-      sha256 "796016e9f412d44e9fe1cbb109a9bc2f6870e2bdaa12ff6091c3eb9deb63dcfa"
+      url "https://github.com/anchorbrowser/cli/releases/download/v0.1.12/anchorbrowser_0.1.12_linux_arm64.tar.gz"
+      sha256 "a9bd1c11ce697b37cfeb13cb436d1040a573e1e6949f475bc3e489eff7d975d0"
       define_method(:install) do
         bin.install "anchorbrowser"
         generate_completions_from_executable(bin/"anchorbrowser", "__completion")
